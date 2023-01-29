@@ -2,13 +2,18 @@ variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
-
-variable "ssh_key" {
-  type    = string
-  default = "Free-aws-sshkey"
+variable "elasticapp" {
+  default = "firstapp"
+}
+variable "beanstalkenv" {
+  default = "envforwebpage"
+}
+variable "solution_stack_name" {
+  type = string
+}
+variable "tier" {
+  type = string
 }
 
-variable "subnet" {
-  type    = string
-  default = "subnet-0ee3b59cbd1f54e84"
-}
+variable "vpc_id" {}
+variable "public_subnets" {}
