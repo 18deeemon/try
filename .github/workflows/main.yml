@@ -22,7 +22,7 @@ jobs:
     
     - name: Install all dependences for testing app
       run : |
-         apn-get install python3.8 
+         apt-get install python3.8 
          python -m pip install flask 
         
    
