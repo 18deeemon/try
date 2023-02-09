@@ -19,7 +19,13 @@ jobs:
     steps:
     - name: Git clone our repo
       uses: actions/checkout@v1
-       
+    
+    - name: Install all dependences for testing app
+      run : |
+         apn-get install python3.8 
+         python -m pip install flask 
+        
+   
     - name: Create ZIP package of Webpage
       run : zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x "*.git*" -x "*.terraform*" -x "infrastructure/*" -x "README*"
    
